@@ -6,10 +6,10 @@ import * as actions from '../actions';
 // BrowserRouter is the brain of the router
 // The Route object is used to set up the rules
 import Header from './Header';
+import Landing from './Landing';
 
 const Dashboard = () => <h2> Dashboard</h2>;
 const SurveyNew = () => <h2> SurveyNew</h2>;
-const Landing = () => <h2> Landing</h2>;
 
 class App extends Component {
   componentDidMount() {
