@@ -29,7 +29,7 @@ require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
 // this variable (process.env.NODE_ENV) is set up by Heroku
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   // Make sure Express will serve up production assets like main.css, main.js
   app.use(express.static('client/build'));
   // Express will servup the index.html file if it doesn't recognize the route
@@ -38,6 +38,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+
 //new instance of Google Strategy
 // passport.use - I want you to be aware that there's a new strategy.
 const PORT = process.env.PORT || 5000;
