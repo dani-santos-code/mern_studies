@@ -15,7 +15,8 @@ const { Schema } = mongoose;
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 const userSchema = new Schema({
-  googleId: String
+  googleId: String,
+  credits: { type: Number, default: 0 }
 });
 
 // mongo wants us to let it know what properties we will have
